@@ -3,7 +3,7 @@ def get_first_name_of_season_winner(data, season)
   name_holder = ""
 
   data.each do |season, contestants|
-    if season_num.to_s == season
+    if season.to_s == season
       contestants.each do |contestant|
         contestant.each do |contestant_attr, contestant_value|
           if contestant_attr.to_s == "name"

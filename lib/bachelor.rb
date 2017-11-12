@@ -6,10 +6,10 @@ def get_first_name_of_season_winner(data, season)
     if season_num.to_s == season
       contestants.each do |contestant|
         contestant.each do |contestant_attr, contestant_value|
-          if attribute_name.to_s == "name"
-            name_holder = attribute_value
+          if contestant_attr.to_s == "name"
+            name_holder = contestant_value
           end
-          if attribute_value == "Winner"
+          if contestant_value == "Winner"
             winner_name = name_holder
           end
         end

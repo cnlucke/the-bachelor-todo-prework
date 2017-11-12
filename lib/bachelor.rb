@@ -21,13 +21,13 @@ def get_contestant_name(data, occupation)
   target_name = ""
   name_holder = ""
 
-  data.each do |season, season_data|
-    season_data.each do |contestants, value|
-      contestants.each do |contestants_attr, contestants_value|
-        if contestants_attr.to_s == "name"
-          name_holder = contestants_value
+  data.each do |season, contestants|
+    contestants.each do |contestant|
+      contestant.each do |contestant_attr, contestant_value|
+        if contestant_attr.to_s == "name"
+          name_holder = contestant_value
         end
-        if contestants_value == occupation
+        if contestant_value == occupation
           target_name = name_holder
         end
       end

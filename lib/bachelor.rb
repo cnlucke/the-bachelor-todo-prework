@@ -57,7 +57,7 @@ def get_occupation(data, hometown)
   flag = false
   occupation = ""
 
-  data.each do |season, season_data|
+  data.each do |season, contestants|
     contestants.each do |contestant|
       contestant.each do |contestant_attr, contestant_value|
         if contestant_value == hometown
